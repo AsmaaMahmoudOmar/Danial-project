@@ -1,0 +1,453 @@
+*{
+    box-sizing:border-box;
+}
+:root{
+    --primary-font: 'Montserrat', sans-serif;
+    --second-font: 'Poppins', sans-serif;
+    --clr-black:0,0,0;
+    --clr-gray:#f4f4f4;
+    --property:all;
+    --duration:1s;
+    --font-size:14px;
+    --inVisible:var(--inVisible);
+}
+
+body{
+    font-family: var(--primary-font);
+}
+p,
+span{
+    font-family: var(--second-font);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--primary-font);
+}
+a{
+    text-decoration:var(--inVisible);
+}
+.fs-sm{
+    font-size: var(--font-size);
+}
+.text h3{
+    z-index: 1;
+}
+.text h3::after{
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -10px;
+    left:0;
+    z-index: -1;
+    }
+/*  start navbar */
+#work .nav-pills .nav-link.active::after,
+.navbar-nav .nav-link.active::after 
+{
+    width:100%;
+} 
+.navbar-nav .nav-link{
+    font-size: var(--font-size);
+}
+#work .nav-pills .nav-link,
+.navbar-nav .nav-link{
+    position: relative;
+    padding: 0;
+    font-family: var(--second-font);
+   
+}
+#work .nav-pills .nav-link::after,
+.navbar-nav .nav-link::after{
+content: "";
+width: 0;
+height: 2px;
+bottom: 0px;
+left:0;
+position: absolute;
+background-color: rgb(var(--clr-black));
+transition: var(--duration) var(--property);
+}
+.navbar-toggler{
+    border:var(--inVisible);
+}
+.navbar-toggler:focus{
+    box-shadow: var(--inVisible);
+}
+/* end navbar */
+/* start header */
+header{
+    background-image:linear-gradient(rgba(var(--clr-black),.7),rgba(var(--clr-black),.7)), url(../imgs/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    --bs-bg-opacity:.1;
+}
+header .home-icons a{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+   color: white;
+   cursor: pointer;
+  
+}
+header .dic::after{
+    content: "|";
+    display: inline-block;
+    animation-name:typing ;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: var(--duration) animation-name;
+}
+@keyframes typing {
+    0%{
+        content: "|";
+    }
+    1.5%{
+        content: "l|";
+    }
+    3%{
+        content: "la|";
+    }
+    4.5%{
+        content: "lar|";
+    }
+    6%{
+        content: "larr|";
+    }
+    7.5%{
+        content:"larry|" ;
+    }
+    9%{
+        content: "larry |";
+    }
+    10.5%{
+        content: "larry d|";
+    }
+    13%{
+        content: "larry da|";
+    }
+    14.5%{
+        content: "larry dan|";
+    }
+    16%{
+        content: "larry dani|";
+    }
+    17.5%{
+        content: "larry danie|";
+    }
+    19%{
+        content: "larry daniel|";
+    }
+    20.5%{
+        content: "larry daniels|";
+    }
+    22%{
+        content: "larry daniels|";
+    } 
+    23.5%{
+        content: "larry daniels|";
+    }
+    25%{
+        content: "larry daniels|";
+      
+    }
+    26.5%{
+        content: "larry daniel|";
+    }
+    27%{
+        content: "larry danie|";
+    }
+    28.5%{
+        content: "larry dani|";
+    }
+    30%{
+        content: "larry dan|";
+    }
+    31.5%{
+        content: "larry da|";
+    }
+    33%{
+        content: "larry d|";
+    }
+    34.5%{
+        content: "larry |";
+    }
+    36%{
+        content:"larry|" ;
+    }
+    37.5%{
+        content: "larr|";
+    }
+    39%{
+        content: "lar|";
+    }
+    40.5%{
+        content: "la|";
+    }
+    42%{
+        content: "l|";
+    }
+    43.5%{
+        content: "|";
+    }
+    45%{
+        content: "d|";
+    }
+    46.5%{
+        content: "de|";
+    }
+    48%{
+        content: "dev|";
+    }
+    49.5%{
+        content: "deve|";
+    }
+    51%{
+        content: "devel|";
+    }
+    52.5%{
+        content: "Develo|";
+      }
+    53% {
+        content: "Develop|";
+      }
+    54.5% {
+        content: "Develope|";
+      }
+    56% {
+        content: "Developer|";
+      }
+    57.5% {
+        content: "Developer|";
+      }
+    59% {
+        content: "Developer|";
+      }
+    61.5% {
+        content: "Developer|";
+      }
+    63% {
+        content: "Develope|";
+      }
+    64.5%{
+        content: "Develop|";
+      }
+    66%{
+        content: "Develo|";
+      }
+    67.5% {
+        content: "Devel|";
+      }
+    69% {
+        content: "Deve|";
+      }
+    71.5% {
+        content: "Dev|";
+      }
+    73%{
+        content: "Dev|";
+      }
+    74.5%{
+        content: "De|";
+      }
+    76%{
+        content: "D|";
+      }
+    77.5%{
+        content: "|";
+      }
+    79% {
+        content: "D|";
+      }
+    81.5%{
+        content: "De|";
+      }
+    83%{
+        content: "Des|";
+      }
+    84.5%{
+        content: "Desi|";
+      }
+    86%{
+        content: "Desig|";
+      }
+    87.5%{
+        content: "Design|";
+      }
+    89%{
+        content: "Designe|";
+      }
+    91.5%{
+        content: "Designer|";
+      }
+    93%{
+        content: "Designer|";
+      }
+    94.5%{
+        content: "Designer|";
+      }
+    96%{
+        content: "Designer|";
+      }
+    97.5%{
+        content: "|";
+      }
+    99%{
+        content: "|";
+      }
+    100%{
+        content: "|";
+      }
+        
+}
+/* end header */
+/* section about */
+#about .img-about div{
+padding-left: 35px;
+}
+#about .img-about::after{
+content: "";
+width: 80%;
+height: 80%;
+background-image: url(../imgs/dots.png);
+background-repeat: repeat;
+background-position: center;
+position: absolute;
+left:0;
+bottom: -30px;
+z-index: -1;
+}
+#about .skills .progress{
+    height: 25px;
+    box-shadow: inset 0 0 10px #ccc;
+}
+#about .skills .progress-bar span:nth-child(1){
+    left:10px;
+}
+#about .skills .progress-bar span:nth-child(2){
+   right: 10px;
+}
+.buttons a{
+    transition: .7s var(--property);
+
+}
+.buttons a:nth-child(2):hover,
+.buttons a:nth-child(1){
+    background-color:rgb(var(--clr-black));
+    color:white;
+    
+}
+.layer-img span:hover,
+.buttons a:nth-child(2),
+.buttons a:nth-child(1):hover{
+    background-color: white;
+    color:rgb(var(--clr-black));
+    border: 1px solid rgb(var(--clr-black));
+}
+/* end about */
+/* start services */
+/* common code between service and contact */
+.card span{
+    width: 70px;
+    height: 70px;
+    place-items: center;
+    background-color:var(--clr-gray);
+    transition: var(--duration) var(--property);
+}
+.card:hover span{
+    background-color:rgb(var(--clr-black));
+}
+.card:hover span i{
+    color: var(--clr-gray);
+}
+/* end services */
+/* section works */
+
+#work .nav-pills .nav-link.active{
+    background-color: transparent;
+}
+.layer-img{
+    opacity: 0;
+    inset: 5px;
+    transition: var(--duration) var(--property);
+}
+.layer-img span{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(var(--clr-black));
+    color: var(--clr-gray);
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .5s var(--property);
+}
+#work .item:hover .layer-img{
+    opacity: 1;   
+}
+#work .item .layer-img  h6{
+    transform: translateY(-10px);
+    transition: var(--duration) var(--property);
+}
+#work .item .layer-img span{
+    transform: translateY(10px);
+    transition: var(--duration) var(--property);
+}
+#work .item:hover .layer-img span,
+#work .item:hover .layer-img h6{
+    transform: translateY(0px);
+ }
+ #work h6{
+    font-size: 12px;
+}
+
+/* end work*/
+/*start client-section  */
+#client .carousel-item img{
+    width: 90px;
+}
+#client .carousel-item span{
+    font-size: 12px;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    background-color:gray;
+}
+/* start team */
+#team .layer-img span{
+    width: 50px;
+    height: 50px;
+}
+#team .layer-img {
+  transform: rotateY(180deg) scale(.5);
+  transition: .7s var(--property);
+}
+#team .person-one:hover .layer-img {
+  opacity:.95;
+  transform: rotateY(360deg);
+}
+#team .img-team img{
+  transition: var(--duration) var(--property);
+}
+#team .img-team:hover img{
+  transform: scale(1.3);
+}
+/* end team */
+/* contact */
+form textarea{
+    resize: var(--inVisible);
+}
+form input:focus,
+textarea:focus
+{
+    outline:var(--inVisible);
+}
+
+@media all and (min-width: 1200px) {
+    #contact .container{
+        width: 75%
+    }
+}
